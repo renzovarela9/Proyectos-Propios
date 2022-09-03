@@ -1,0 +1,8 @@
+Back-end
+Servidor
+
+Lenguajes de programacion: como Python tiene Frameworks django
+
+Un back-end tiene una infraestrucura
+
+trabaja con bases de datos

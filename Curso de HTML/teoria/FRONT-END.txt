@@ -1,0 +1,16 @@
+Perfil de un web developer
+
+front-end
+el front es lo que maneja el cliente
+
+Un front debe tener Html, CSS Java Script
+es lo que el navegador entiende
+
+Frameworks de CSS trabajos contruidos
+
+Frameworks y librerias de JS
+
+Preprocesadores de CSS
+
+COMPILADORES DE JS
+
