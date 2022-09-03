@@ -1,0 +1,158 @@
+Primero que nada debemos saber que Python es un lenguaje de programacion
+
+Se pueden crear, aplicaciones para celulares, paginas web, programas y muchos mas.
+debemos enteder que al escribir en el lenguaje de python tenes que ser claros a la hora de indicar alguna intruccion que quiero decir tenemos que escribir un algoritmo claro.
+
+
+primero que nada vamos impimir en pantalla una frase
+
+usaremos la palabra print para impimir en pantalla
+aclaracion: esta palabra print va a compañada de dos parentesis y dobles comillas donde adentro de esa instruccion se ejecutara la frase que queremos imprimir en pantalla. siempre finalizar la instruccion con ;
+
+Abrir Idle, una vez en el Shell, seleccionar New File. luego cuando se abre la siguiente ventana debemos guardarla en cualquier carpeta, y con cualquier nombre. escribiremos la siguente instruccion
+
+print ("Hola Mundo");
+
+La guardaremos y la ejecutaremos con run module y deberia aparecer esto en el Shell
+
+Hola Mundo
+
+Alclaracion: Podes escribir cualquier cosa, un ejemplo hola soy delma, o me gusta caminar SIEMPRE Y CUANDO la frase que quieras imprimir en pantalla este adentro de ("los parentesis y dobles comillas")
+
+
+
+
+
+
+
+
+Variables:
+una variable es como una caja que se pueden almacenar cosas. esa cosas que almacenamos pueden ser modificadas. por eso se llaman variables, varian todo el tiempo.
+las variables pueden ser palabras combianadas con numero y separadas con un guion bajo ejemplos:
+
+si yo tuviera en mi sube 200 pesos puedo llamar a la variable saldo y y asignar que tengo 200 pesos, pongo el nombre luego un = y asigno los 200, entonces quiere decir que la variable saldo hay 200 pesos
+
+saldo = 200
+
+
+supongamos que yo le recargue 50 pesos mas.. al ser una variable podemos remplazarla, en la siguente linea de codigo. no hace falta modificar la misma instruccion
+
+saldo = 250
+
+para comprobar eso, lo que hacemos imprimir 2 veces la variable saldo para comprobar esto
+
+
+saldo = 200
+print (saldo)
+saldo = 250
+print (saldo)
+
+
+ACLARACION, SE RECOMIENDA QUE USTEDES PRUEBEN ESTO PARA VERIFICAR LO QUE DIGO
+
+importante saber: yo puedo llamar a la variable como quiera respetando el orden y la separacion con guion bajo veamos mas ejemplos..
+si quiero asignar varios jugadores en un juego puedo llamar a las variables de las siguiente forma:
+
+jugador01
+jugador1
+jugador_uno
+
+no usar mayusculas al principio, respetar el orden de primero la palabra y luego el numero y recordar que se separa con guiones.
+
+ya sabemos que una variable se puede almacenar datos. ¿Que tipos de datos? numeros(enteros, decimales, etc), palabras (cadenas de caracteres). para numeros enteros usaremos el codigo int, para decimales el float y para las palabras o letras usaremos str
+
+esto nos sirve para declarar la variable, inicializarla y asignarla. veamos un ejemplo
+
+
+#Declarar Varibles
+prueba = int ();
+prueba01= float ();
+prueba_uno = str ();
+
+#Limpiar/Inicializar Variables
+prueba = 0;
+prueba01 = 0.0;
+prueba_uno = "";
+
+#Asignar Valores a las variables
+
+prueba = 10;
+prueba01  = 20.0;
+prueba_uno  = "30";
+print ("La variable prueba se le ha asignado el numero: ",prueba);
+print ("La variable prueba01 se le ha asignado el numero: ",prueba01);
+print ("La variable prueba_uno se le ha asignado el numero: ",prueba_uno);
+
+
+
+cadfa vez que usemos variables debemos recordar este praton, declarla ya sea como un numero decimal (float) o entero (int) o como una cadena de caracter (str). luego inicializamos la variable, con 0 o 0.0 o asi "" depende como la hayamos declarado y luego a asignamos. simepre debemos probar imprimir en patalla las variables para probar si la asignamos bien...
+
+print() adentro de esos parantesis sin comillas ponemos el nombre de la variable para mostrarla en patalla
+
+
+
+
+
+
+
+CONSTANTE:
+Como su nombre lo dice las constantes no cambian, esta funcion se puede usar en ocaciones donde tengamos un valor definido que usaremos de principio a fin y no sera modificado... Las variables son declaradas, inicializadas y asignadas, en cambio las constantes.. se declarar y asigna a la vez.
+para llamar a esta funcion lo unico que debemos hacer es poner el texto en MAYUSCULA, agregar un igual y asignar un valor. veamos un ejmplo y comparacion
+
+jugador1 = Pedro
+
+JUGADOR1 = Pedro
+
+la diferencia esta en que la primera linea de codigo jugador1 es una variable, y puede ser modificada, puede pasar de pedro a simon a ser el jugador1, en cambio al llamar JUGADOR1 a pedro declaramos que este sera el jugador que inicie y finalice nuestro programa. 
+
+otro ejemplo seria el IVA, siempre sera 21% o PI que equivale 3,1416.
+
+Como la variable, la constante debe tener un nombre (en MAYUSCULA) un = y asignarle el valor que no podremos cambiar
+
+
+
+
+
+
+Introducir datos por teclado: input
+En la lección anterior pudiste comprobar que en los lenguajes de programación aparecen diferentes tipos de datos (textos o números). De este modo, cuando se solicite al usuario que introduzca algo por el teclado debemos especificarle si lo que tiene que introducir es un texto o un número.
+
+En esta lección aprenderás a utilizar la función «input()» para solicitar al usuario que introduzca algo a través del teclado.
+
+input ("Indrotuzca algo a traves de teclado")
+
+
+
+Lo que ocurre realmente cuando se utiliza esta función, es que la computadora recibe algo a través del teclado y lo interpreta como texto (por defecto). Sin embargo, en ocasiones lo que introduce el usuario correspode a un número. En este caso tenemos que indicarle que tiene que transformarlo a número.
+
+Para transformar lo introducido a través del teclado a un tipo de dato numérico y de tipo entero, debemos utilizar la función «int()», y dentro de los paréntesis le añadiremos lo que queremos convertir a tipo entero «int( input() )». Por otro lado, para transformar lo introducido a un tipo de dato numérico de tipo decimal (coma flotante), debemos utilizar la función «float()» y del mismo modo, dentro de los paréntesis se le añadirá lo que queremos convertir a tipo decimal «float( input() )». En programación, a esto se le conoce como casting.
+
+
+
+int(input("Introduzca un numero entero a traves de teclado"))
+float(input("Introduzca un numero decimal a traves de teclado"))
+
+
+Lo mas recomendable es que cuando nos indiquen que debemos ingresar datos a traves de teclado lo guardemos en una variable... para poder realizar operaciones. Veamos un ejemplo:
+
+
+
+#Declarar Varibles
+nombre01 = str ();
+nombre02 = str ();
+
+#Limpiar/Inicializar Variables
+nombre01 = "";
+nombre02 = "";
+
+#Asignar Valores a las variables
+nombre01 = str(input("¿Como se llama usted?: "));
+nombre02 = str(input("¿Como se llama usted?: "));
+print (nombre01 + " tiene 17 años");
+print (nombre02 + " tiene 21 años");
+
+
+Aclaracion(PRUEBE EL PROGRAMA PARA VERIFICAR SI ES CIERTO)
+
+Ya la variable nombre01 y nombre02 no tienen un valor asignado.. sino que el valor se lo agregamos nosotros. y podemos concatenar y hacer combinaciones de todo tipo, en este caso imprimimos en pantalla para comprobar que los valores que asignamos sean los correctos.
+
