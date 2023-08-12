@@ -60,7 +60,7 @@ public class Ejercicio6 {
         Scanner in = new Scanner(System.in);
 
         //Declaracion de variables 
-        int num_factura, cant_vendida, precio_sin_iva, monto_total_A, cant_vendida_B, mayores_facturas_3000, mayores_facturas_3000A, mayores_facturas_3000B, mayores_facturas_3000C, cant_vendida_acum, max;
+        int num_factura, cant_vendida, precio_sin_iva, monto_total_A, cant_vendida_B, mayores_facturas_3000, mayores_facturas_3000A, mayores_facturas_3000B, mayores_facturas_3000C, max;
         double monto_total_facturado;
         double monto_total_C;
         double monto_total_B;
@@ -81,7 +81,6 @@ public class Ejercicio6 {
         mayores_facturas_3000A = 0;
         mayores_facturas_3000B = 0;
         mayores_facturas_3000C = 0;
-        cant_vendida_acum = 0;
         max = 3000;
         porcentaje_A = 0.0;
         porcentaje_B = 0.0;
@@ -89,100 +88,104 @@ public class Ejercicio6 {
         numero_art = 'Z';
 
 
-
         //validacion de entradas
-        while (num_factura != 0){
-            System.out.println("Bienvenido al registro de ventas, le recordamos que para finalizar la carga de datos, la factura tiene que ser igual a 0");
-            System.out.println("");
-     
+        System.out.println("Bienvenido al registro de ventas, le recordamos que para finalizar la carga de datos, la factura tiene que ser igual a 0");
+        System.out.println("");
+         
+        while (num_factura <0){
             System.out.println("Ingrese su numero de factura: ");
             num_factura = in.nextInt();
-            if(num_factura == 0){       
-                break;     
-
-            }
-               
-
             if(num_factura < 0){
                 System.out.println("Error- Ingrese un valor valido");
             }//Mensaje de error
-         
-
-        while (numero_art != 'A' && numero_art != 'B' && numero_art != 'C'){
-            System.out.println("Ingrese el codigo de su articulo: ");
-            numero_art = in.next().charAt(0);
-
-            if(numero_art != 'A' && numero_art != 'B' && numero_art != 'C'){
-                System.out.println("Error- Ingrese un valor valido");
-            }//Mensaje de error
-
-         
-        }//FIN NUMERO DE ARTICULO
-
-        while (cant_vendida <= 0){
-            System.out.println("Ingrese la cantidad vendida: ");
-            cant_vendida = in.nextInt();
-
-            if(cant_vendida <= 0){
-                System.out.println("Error- Ingrese un valor valido");
-            }//Mensaje de error
-
-         
-        }//FIN CANTIDAD VENDIDA
-
-        while (precio_sin_iva <= 0){
-            System.out.println("Ingrese el precio unitario: ");
-            precio_sin_iva = in.nextInt();
-
-            if(precio_sin_iva <= 0){
-                System.out.println("Error- Ingrese un valor valido");
-            }//Mensaje de error
-
-         
-        }//FIN PRECIO UNITARIO
-
-         
-
-        if(numero_art == 'A'){
-            monto_total_A = cant_vendida * precio_sin_iva;
-
-          if (cant_vendida > max){
-
-            mayores_facturas_3000A = mayores_facturas_3000A +1; 
-        }//fin mayores a 3000
-
-
-        }//Fin art A
-
-        if(numero_art == 'B'){
-            cant_vendida_B = cant_vendida; 
-            monto_total_B = (cant_vendida * (precio_sin_iva + (precio_sin_iva * IVA) ));
             
-            if (cant_vendida > max){
-            mayores_facturas_3000B = mayores_facturas_3000B +1; 
-        }//fin mayores a 3000
+            if(num_factura == 0){
+                break;
+            }//SALE DEL BUCLE
+
+            if(num_factura >0){
+
+            while (numero_art != 'A' && numero_art != 'B' && numero_art != 'C'){
+                System.out.println("Ingrese el codigo de su articulo: ");
+                numero_art = in.next().charAt(0);
+
+                if(numero_art != 'A' && numero_art != 'B' && numero_art != 'C'){
+                    System.out.println("Error- Ingrese un valor valido");
+                }//Mensaje de error
+
+         
+            }//FIN NUMERO DE ARTICULO
             
+            while (cant_vendida <= 0){
+                System.out.println("Ingrese la cantidad vendida: ");
+                cant_vendida = in.nextInt();
 
-        }//Fin art B
+                if(cant_vendida <= 0){
+                    System.out.println("Error- Ingrese un valor valido");
+                }//Mensaje de error
 
-        if(numero_art == 'C'){
-            monto_total_C = (cant_vendida * (precio_sin_iva + (precio_sin_iva * IVA) ));
+         
+            }//FIN CANTIDAD VENDIDA
+
+
+            while (precio_sin_iva <= 0){
+                System.out.println("Ingrese el precio unitario: ");
+                precio_sin_iva = in.nextInt();
+
+                if(precio_sin_iva <= 0){
+                    System.out.println("Error- Ingrese un valor valido");
+                }//Mensaje de error
+
+         
+            }//FIN PRECIO UNITARIO
+
+         
+
+            if(numero_art == 'A'){
+                monto_total_A = cant_vendida * precio_sin_iva;
 
             if (cant_vendida > max){
-            mayores_facturas_3000C = mayores_facturas_3000C +1; 
-        }//fin mayores a 3000
+                mayores_facturas_3000A = mayores_facturas_3000A +1; 
+            }//fin mayores a 3000
 
-        }//Fin art C
+
+            }//Fin art A
+
+            if(numero_art == 'B'){
+                cant_vendida_B = cant_vendida; 
+                monto_total_B = (cant_vendida * (precio_sin_iva + (precio_sin_iva * IVA) ));
+            
+                if (cant_vendida > max){
+                    mayores_facturas_3000B = mayores_facturas_3000B +1; 
+                }//fin mayores a 3000
+            
+
+            }//Fin art B
+            
+            if(numero_art == 'C'){
+                monto_total_C = (cant_vendida * (precio_sin_iva + (precio_sin_iva * IVA) ));
+                
+                if (cant_vendida > max){
+                    mayores_facturas_3000C = mayores_facturas_3000C +1; 
+                }//fin mayores a 3000
+
+            }//Fin art C
     
 
-       //iNICIALIZAR VARIABLES
-        num_factura = -1;
-        cant_vendida = 0;
-        precio_sin_iva = 0;
-        IVA = 0.21;
-        numero_art = 'Z';
+            //iNICIALIZAR VARIABLES
+            num_factura = -1;
+            cant_vendida = 0;
+            precio_sin_iva = 0;
+            IVA = 0.21;
+            numero_art = 'Z';
+        
 
-        }//bucle principal
+
+        }//BUCLE PRINCIPAL
+
+
+        }//Fin validacion
+        
 
         monto_total_facturado =  (monto_total_A + monto_total_B + monto_total_C); //Fin monto total facturado
         
